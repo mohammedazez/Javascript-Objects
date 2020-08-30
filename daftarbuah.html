@@ -6,7 +6,7 @@
     <title>Daftar Buah</title>
   </head>
   <body>
-    <p id="buah"></p>
+    <div id="box"></div>
 
     <script>
       let buah = [
@@ -60,17 +60,18 @@
         },
       ];
 
-      buah.forEach((daftarBuah) => {
-        document.getElementById("buah").innerHTML = buah;
-        // buah.nama +
-        // "," +
-        // buah.warna +
-        // "," +
-        // buah.namaLatin +
-        // "," +
-        // buah.tipeBiji;
-        console.log(daftarBuah);
-      });
+      var html = "<table border='1|1'>";
+      for (var i = 0; i < buah.length; i++) {
+        html += "<tr>";
+        html += "<td>" + buah[i].nama + "</td>";
+        html += "<td>" + buah[i].warna + "</td>";
+        html += "<td>" + buah[i].namaLatin + "</td>";
+        html += "<td>" + buah[i].tipeBiji + "</td>";
+
+        html += "</tr>";
+      }
+      html += "</table>";
+      document.getElementById("box").innerHTML = html;
     </script>
   </body>
 </html>
