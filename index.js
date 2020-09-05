@@ -1,9 +1,10 @@
-let buah = [
+let fruit = [
   {
     nama: "Apple",
     warna: "hijau",
     namaLatin: "Malus sylvestris",
     tipeBiji: "single seed",
+    picture: "./assets/apel.jpg",
   },
   {
     nama: "Banana",
@@ -49,6 +50,23 @@ let buah = [
   },
 ];
 
-buah.forEach((daftarBuah) => {
-  console.log(daftarBuah);
-});
+// Pemanggilan menggunakan DOM
+let buah = document.querySelector(".buah");
+
+// Function Looping untuk show
+let display = () => {
+  fruit.forEach((item) => {
+    let card = document.createElement("div");
+    card.innerHTML = `
+    <h5>${item.nama}</h5>
+    <p>Warna: ${item.warna}</p>
+    <p>Nama Latin: ${item.namaLatin}</p>
+    <p>Tipe Biji: ${item.tipeBiji}</p>
+    <p>Gambar: ${item.picture}<p>
+  `;
+    buah.appendChild(card);
+  });
+};
+
+// Panggil Functionya
+display();
