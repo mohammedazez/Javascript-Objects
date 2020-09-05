@@ -1,2 +1,7 @@
+.judul {
+  text-align-last: center;
+}
 
-      
+.container {
+  display: grid;
+}

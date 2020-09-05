@@ -64,7 +64,10 @@ let buah = document.querySelector(".buah");
 let display = () => {
   fruit.forEach((item) => {
     let card = document.createElement("div");
-    card.innerHTML = `<div class="card" style="width: 18rem;">
+    card.innerHTML = `
+    <div class="container">
+    <div class="row">
+    <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="${item.picture}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">${item.nama}</h5>
@@ -74,7 +77,9 @@ let display = () => {
       <p>${item.tipeBiji}</p>
       <a href="#" class="btn btn-primary">Beli Sekarang</a>
     </div>
-  </div>`;
+    </div>
+    </div>
+    </div>`;
     buah.appendChild(card);
   });
 };
