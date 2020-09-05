@@ -4,5 +4,10 @@
 
 .container {
   background-color: whitesmoke;
-  flex-direction: row;
+}
+
+.buah {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
 }
